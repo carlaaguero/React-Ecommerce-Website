@@ -1,6 +1,6 @@
 export const formatPrice = (price) => {
-    return new Intl.NumberFormat('en-GB', {
+    return new Intl.NumberFormat('en-US', {
         style: 'currency',
-        currency: 'GBP'
-    }).format(price);
+        currency: "GBP"
+    }).format(price / 100);
 }
