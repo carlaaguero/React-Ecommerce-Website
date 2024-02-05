@@ -6,6 +6,7 @@ import SingleProduct from '../SingleProduct/SingleProduct';
 import Error from '../Error/Error';
 import Loader from '../Loader/Loader';
 import {STATUS} from "../../utils/status";
+import "./SingleCategory.scss";
 
 const SingleCategory = ({products, status}) => {
     const dispatch = useDispatch();
