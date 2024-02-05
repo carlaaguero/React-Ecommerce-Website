@@ -4,7 +4,7 @@ import "./Loader.scss";
 
 const Loader = () => {
   return (
-    <div className='container py-5'>
+    <div className='container'>
         <div className = "flex flex-center loader">
             <img src = {spinner} alt = "loader" />
         </div>

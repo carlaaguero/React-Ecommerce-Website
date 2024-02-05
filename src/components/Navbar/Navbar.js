@@ -1,16 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect} from 'react';
 import "./Navbar.scss";
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCategories } from '../../store/categorySlice';
 import { getCartTotal } from '../../store/cartSlice';
-
-
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const {data: categories} = useSelector((state) => state.category);
   const {totalItems} = useSelector((state => state.cart));
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
@@ -24,7 +23,7 @@ const Navbar = () => {
         <div className = "container">
           <div className = "navbar-top flex flex-between">
               <Link to = "/" className = "navbar-brand">
-                <span className = "text-regal-blue">Shopping</span><span className='text-gold'>Hub.</span>
+                <span className = "text-regal-blue">Chic</span><span className='text-gold'>Atelier</span>
               </Link>
 
               <form className = "navbar-search flex">
