@@ -19,7 +19,7 @@ const ProductList = ({products, status}) => {
 
     if(status === STATUS.ERROR) return (<Error />);
     if(status === STATUS.LOADING) return (<Loader />);
-
+    
     return (
         <section className='product py-5 bg-ghost-white' id = "products">
             { isModalVisible && <SingleProduct />}
@@ -35,7 +35,7 @@ const ProductList = ({products, status}) => {
                                 <div className='product-item bg-white' key = {product.id} onClick = {() => viewModalHandler(product)}>
                                     <div className='product-item-img'>
                                         <img src = {product.images[0]} alt = "" />
-                                        <div className = "product-item-cat text-white fs-13 text-uppercase bg-gold fw-6">{product.category.name}</div>
+                                        {product.category && <div className = "product-item-cat text-white fs-13 text-uppercase bg-gold fw-6">{product.category.name}</div>}
                                     </div>
                                     <div className='product-item-body'>
                                         <h6 className = "product-item-title text-pine-green fw-4 fs-15">{product.title}</h6>
@@ -51,4 +51,4 @@ const ProductList = ({products, status}) => {
     )
 }
 
-export default ProductList
+export default ProductList;
